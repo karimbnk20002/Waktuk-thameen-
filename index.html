@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>وقتك ثمين | Your Time Is Precious</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg1:#FAF3E0;--bg2:#DCEFE5;--card:#FFFCF5;--tx:#0A1F33;--gold:#A8841A;--em:#0B6B52;--ln:rgba(168,132,26,.35);--pat:.14;--soft:rgba(10,31,51,.08)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg1:#0A1F33;--bg2:#064435;--card:#0F2E45;--tx:#FAF3E0;--gold:#D4AF37;--em:#2FA882;--ln:rgba(212,175,55,.35);--soft:rgba(250,243,224,.1)}}
+:root[data-theme="dark"]{color-scheme:dark;--bg1:#0A1F33;--bg2:#064435;--card:#0F2E45;--tx:#FAF3E0;--gold:#D4AF37;--em:#2FA882;--ln:rgba(212,175,55,.35);--soft:rgba(250,243,224,.1)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:linear-gradient(170deg,var(--bg1),var(--bg2));color:var(--tx);font:16px/1.6 system-ui,"Segoe UI",Tahoma,sans-serif;padding-bottom:84px}
+body::before{content:"";position:fixed;inset:0;z-index:-1;opacity:var(--pat);background-repeat:repeat}
+body.b0::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='1.2'%3E%3Crect x='27' y='27' width='36' height='36'/%3E%3Crect x='27' y='27' width='36' height='36' transform='rotate(45 45 45)'/%3E%3C/g%3E%3C/svg%3E");background-size:90px}
+body.b1::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='100'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='1.2'%3E%3Cpath d='M5,100V55Q5,30 35,12Q65,30 65,55V100'/%3E%3Cpath d='M15,100V58Q15,38 35,25Q55,38 55,58V100'/%3E%3C/g%3E%3C/svg%3E");background-size:70px 100px}
+body.b2::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='52'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='1.2'%3E%3Ccircle cx='0' cy='0' r='30'/%3E%3Ccircle cx='60' cy='0' r='30'/%3E%3Ccircle cx='30' cy='26' r='30'/%3E%3Ccircle cx='0' cy='52' r='30'/%3E%3Ccircle cx='60' cy='52' r='30'/%3E%3C/g%3E%3C/svg%3E");background-size:60px 52px}
+main{max-width:560px;margin:0 auto;padding:20px 16px;display:flex;flex-direction:column;gap:16px;align-items:center;text-align:center}
+h1{font:700 46px/1.2 Amiri,"Noto Naskh Arabic",serif;color:var(--gold);margin:0}
+.sub{margin:-12px 0 0;opacity:.8;letter-spacing:.04em}
+h2{font:700 22px/1.4 Amiri,serif;color:var(--gold);margin:0}
+.card{width:100%;background:color-mix(in srgb,var(--card) 88%,transparent);border:1px solid var(--ln);border-radius:24px;padding:18px;display:flex;flex-direction:column;gap:10px;align-items:center}
+.verse{font:400 28px/1.9 Amiri,serif;color:var(--gold)}
+.dim{opacity:.65;font-size:14px}
+button,select,input{font:inherit;color:inherit}
+.btn{width:100%;border:0;border-radius:16px;padding:13px;background:var(--em);color:#FAF3E0;font-weight:700;cursor:pointer}
+.btn.o{background:transparent;border:1.5px solid var(--gold);color:var(--tx)}
+.btn.s{background:var(--soft);color:var(--tx)}
+.btn.sm{width:auto;padding:10px 18px}
+.row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;width:100%}
+.chip{border:1.5px solid var(--ln);background:transparent;border-radius:99px;padding:7px 14px;cursor:pointer}
+.chip.on{background:var(--gold);color:#0A1F33;border-color:var(--gold);font-weight:700}
+.set{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;text-align:start}
+select,input[type=time]{background:var(--soft);border:1px solid var(--ln);border-radius:10px;padding:6px 8px}
+.sw{width:50px;height:28px;border-radius:99px;border:0;background:var(--soft);position:relative;cursor:pointer;flex:none}
+.sw::after{content:"";position:absolute;top:3px;inset-inline-start:3px;width:22px;height:22px;border-radius:50%;background:var(--tx);opacity:.6;transition:.2s}
+.sw.on{background:var(--em)}.sw.on::after{inset-inline-start:25px;background:#FAF3E0;opacity:1}
+nav{position:fixed;bottom:0;left:0;right:0;z-index:5;display:flex;justify-content:space-around;background:var(--card);border-top:1px solid var(--ln);padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px))}
+nav button{background:none;border:0;display:flex;flex-direction:column;align-items:center;font-size:12px;opacity:.6;cursor:pointer;padding:4px 10px;border-radius:12px}
+nav button span{font-size:22px}nav button.on{opacity:1;color:var(--gold);font-weight:700}
+.bars{display:flex;align-items:flex-end;justify-content:space-around;height:170px;width:100%}
+.bar{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;font-size:11px;height:100%}
+.bar i{display:block;width:24px;border-radius:8px 8px 4px 4px;background:linear-gradient(var(--gold),var(--em));min-height:3px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);width:100%;gap:6px}
+.stats b{display:block;color:var(--gold);font-size:18px}.stats span{font-size:11px}
+.act{display:flex;align-items:center;gap:12px;width:100%;text-align:start;background:var(--card);border:1.5px solid var(--ln);border-radius:18px;padding:12px 14px;cursor:pointer}
+.act.on{border-color:var(--gold)}.act em{font-style:normal;font-size:24px}.act span{flex:1}
+.timer{font:700 56px Amiri,serif;color:var(--gold)}
+#toast{position:fixed;top:calc(10px + env(safe-area-inset-top,0px));left:12px;right:12px;max-width:520px;margin:0 auto;z-index:9;background:var(--card);border:1.5px solid var(--gold);border-radius:20px;padding:16px;white-space:pre-line;box-shadow:0 10px 40px rgba(0,0,0,.35);display:none;text-align:start}
+#toast button{margin-top:10px}
+.ov{position:fixed;inset:0;z-index:8;background:linear-gradient(170deg,var(--bg1),var(--bg2));overflow:auto;padding:calc(20px + env(safe-area-inset-top,0px)) 16px 20px}
+a{color:var(--gold);font-weight:700}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div id="toast" role="alert"></div>
+<div id="app"></div>
+<nav id="nav"></nav>
+<script>
+const DEF={lang:"ar",theme:"",bg:0,totalOn:1,totalMin:240,contOn:1,contMin:120,breakMin:5,quietOn:1,qs:"22:00",qe:"05:00",goalMin:180,vib:1,acts:["quran","dhikr"],tab:"home",done:0};
+const ACTS=[["quran","📖","اقرأ القرآن","Read the Quran"],["memorize","🧠","احفظ آية","Memorize a verse"],["learn","🎓","تعلّم شيئاً جديداً","Learn something new"],["book","📚","اقرأ كتاباً نافعاً","Read a beneficial book"],["lecture","🎧","استمع إلى محاضرة إسلامية","Listen to an Islamic lecture"],["walk","🚶","تمرّن أو امشِ قليلاً","Exercise or take a walk"],["family","👨‍👩‍👧","اجلس مع أهلك","Spend quality time with family"],["dhikr","📿","اذكر الله","Perform dhikr"]];
+const DAILY=[["«نعمتان مغبون فيهما كثير من الناس: الصحة والفراغ»","“Two blessings many people lose out on: health and free time.”","رواه البخاري","Narrated by al-Bukhari"],["﴿أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ﴾","“Verily, in the remembrance of Allah do hearts find rest.”","الرعد ١٣:٢٨","Ar-Ra’d 13:28"],["«اغتنم … فراغك قبل شغلك»","“Value … your free time before you become busy.”","رواه الحاكم","Narrated by al-Hakim"],["﴿وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا﴾","“And recite the Quran with measured recitation.”","المزمل ٧٣:٤","Al-Muzzammil 73:4"]];
+function load(k,d){try{return Object.assign(d,JSON.parse(localStorage.getItem(k)||"{}"))}catch(e){return d}}
+let S=load("yt_s",{...DEF}),U=load("yt_u",{days:{}});
+function save(){try{localStorage.setItem("yt_s",JSON.stringify(S));localStorage.setItem("yt_u",JSON.stringify(U))}catch(e){}}
+const AR=()=>S.lang==="ar",t=(a,e)=>AR()?a:e,$=s=>document.querySelector(s);
+const kd=(d=new Date())=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const day=(k=kd())=>U.days[k]||(U.days[k]={sec:0,rem:0,ses:0,long:0,tm:0});
+function fm(m){m=Math.round(m);const h=Math.floor(m/60),r=m%60;return AR()?((h?h+" س":"")+(h&&r?" و ":"")+(r||!h?r+" د":"")):((h?h+"h ":"")+(r||!h?r+"m":"")).trim()}
+function durAr(m){if(m%60)return m+" دقيقة";const h=m/60;return h==1?"ساعة":h==2?"ساعتان":h<=10?h+" ساعات":h+" ساعة"}
+const durEn=m=>m%60?m+" minutes":(m==60?"One hour":m/60+" hours");
+
+/* ---------- tracking ---------- */
+let cs=0,cm=0,hiddenAt=0,sessEnd=0;
+function quiet(){if(!S.quietOn)return false;const n=new Date(),m=n.getHours()*60+n.getMinutes(),p=x=>+x.slice(0,2)*60+ +x.slice(3);const a=p(S.qs),b=p(S.qe);return a<=b?(m>=a&&m<b):(m>=a||m<b)}
+function fire(kind,min){const d=day();d.rem++;if(quiet())return;
+ const ti=t("وقتك ثمين","Your Time Is Precious");
+ const body=kind==="total"?(AR()?`مرّت ${durAr(min)} من وقتك على الهاتف! 🌿\n\nتذكّر أن وقتك ثمين، فاجعل منه نصيباً للقرآن والعلم والعمل الصالح.\n\nأغلق هاتفك قليلاً، وافتح مصحفك.`:`${durEn(min)} have passed on your phone! 🌿\n\nRemember, your time is precious. Give some of it to the Quran, learning, and beneficial activities.\n\nPut your phone down for a while and open your Quran.`)
+ :(AR()?`مرّت ${durAr(min)} من الاستخدام المتواصل.\n\nخذ استراحة من الشاشة، وامنح قلبك بعض الوقت مع القرآن.`:`${durEn(min)} of continuous phone use have passed.\n\nTake a break from the screen and give your heart some time with the Quran.`);
+ toast(ti,body);
+ try{if("Notification" in window&&Notification.permission==="granted")new Notification(ti,{body})}catch(e){}
+ try{if(S.vib&&navigator.vibrate)navigator.vibrate([200,100,200])}catch(e){}save()}
+function toast(ti,body){const e=$("#toast");e.innerHTML=`<b style="color:var(--gold)">${ti}</b>\n${body}<br><button class="btn sm" onclick="this.parentNode.style.display='none'">${t("حسناً","OK")}</button>`;e.style.display="block"}
+setInterval(()=>{if(document.hidden)return;const d=day();d.sec++;cs++;if(cs===1)d.ses++;if(cs>d.long)d.long=cs;
+ if(S.totalOn){const m=Math.floor(d.sec/60/S.totalMin);if(m>d.tm){d.tm=m;fire("total",m*S.totalMin)}}
+ if(S.contOn){const m=Math.floor(cs/60/S.contMin);if(m>cm){cm=m;fire("cont",m*S.contMin)}}
+ if(d.sec%15===0)save()},1000);
+document.addEventListener("visibilitychange",()=>{if(document.hidden){hiddenAt=Date.now();save()}else{if(hiddenAt&&(Date.now()-hiddenAt)/60000>=S.breakMin){cs=0;cm=0}hiddenAt=0}});
+function nextMin(){const a=[];if(S.totalOn){const p=S.totalMin*60;a.push(p-day().sec%p)}if(S.contOn){const p=S.contMin*60;a.push(p-cs%p)}return a.length?Math.ceil(Math.min(...a)/60):null}
+
+/* ---------- views ---------- */
+const BOOK=`<svg viewBox="0 0 240 120" width="220" height="110" aria-hidden="true"><defs><radialGradient id="gl"><stop offset="0" stop-color="#D4AF37" stop-opacity=".4"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></radialGradient></defs><circle cx="120" cy="55" r="70" fill="url(#gl)"/><g fill="#FAF3E0" stroke="#D4AF37" stroke-width="2.5"><path d="M120,26C108,10 74,10 62,28V104C74,90 108,90 120,104Z"/><path d="M120,26C132,10 166,10 178,28V104C166,90 132,90 120,104Z"/></g><g stroke="#D4AF37" stroke-opacity=".6" stroke-width="2" stroke-linecap="round">${[40,50,60,70,80].map(y=>`<path d="M72 ${y}H110M130 ${y}H168"/>`).join("")}</g><circle cx="120" cy="12" r="4" fill="#D4AF37"/></svg>`;
+const card=h=>`<section class="card">${h}</section>`;
+const chips=(k,opts,cur)=>`<div class="row">${opts.map(([v,l])=>`<button class="chip ${cur==v?"on":""}" data-set="${k}" data-val="${v}">${l}</button>`).join("")}</div>`;
+const sw=(k,l)=>`<div class="set"><span>${l}</span><button class="sw ${S[k]?"on":""}" data-tog="${k}" aria-label="${l}"></button></div>`;
+const sel=(k,l,opts)=>`<div class="set"><span>${l}</span><select data-in="${k}" data-num>${opts.map(v=>`<option value="${v}" ${S[k]==v?"selected":""}>${fm(v)}${v==1?t(" (تجربة)"," (test)"):""}</option>`).join("")}</select></div>`;
+function head(){return `<h1>وقتك ثمين</h1><p class="sub">Your Time Is Precious</p>`}
+function home(){const d=day(),g=S.goalMin*60,p=Math.min(d.sec/g,1),C=2*Math.PI*70,n=nextMin(),q=DAILY[Math.floor(Date.now()/864e5)%DAILY.length];
+ return head()+BOOK+card(`<div class="verse">وَالْعَصْرِ ۝ إِنَّ الْإِنْسَانَ لَفِي خُسْرٍ</div><div>“By time, indeed, mankind is in loss.”</div><div class="dim">سورة العصر ١٠٣:١-٢ | Surah Al-Asr 103:1-2</div>`)
+ +card(`<h2>${t("رسالة اليوم","Today’s reminder")}</h2><div>${AR()?q[0]:q[1]}</div><div class="dim">${AR()?q[2]:q[3]}</div>`)
+ +card(`<svg viewBox="0 0 170 170" width="190" height="190"><circle cx="85" cy="85" r="70" fill="none" stroke="var(--soft)" stroke-width="16"/><circle cx="85" cy="85" r="70" fill="none" stroke="var(--gold)" stroke-width="16" stroke-linecap="round" stroke-dasharray="${C*p} ${C}" transform="rotate(-90 85 85)"/><text x="85" y="88" text-anchor="middle" fill="currentColor" font-size="26" font-weight="700">${fm(d.sec/60)}</text><text x="85" y="110" text-anchor="middle" fill="currentColor" opacity=".7" font-size="12">${t("من ","of ")}${fm(S.goalMin)}</text></svg>
+ <div>${d.sec<=g?t("أنت ضمن هدفك اليوم، بارك الله في وقتك 🌿","You’re within your goal today. May Allah bless your time 🌿"):t("لحظة جديدة لبداية طيبة، فاجعل لك نصيباً من الذكر والقرآن.","A new moment is a good start. Give yourself a share of dhikr and Quran.")}</div>
+ ${n!==null?`<b style="color:var(--gold)">${t("التذكير القادم بعد ","Next reminder in ")}${fm(n)}</b>`:""}`)
+ +`<button class="btn" data-tab="stats">📊 ${t("الإحصاءات التفصيلية","Detailed statistics")}</button><button class="btn o" data-tab="settings">⏰ ${t("تخصيص التذكيرات","Customize reminders")}</button><a class="btn s" style="text-decoration:none;display:block;font-weight:700" href="https://quran.com" target="_blank" rel="noopener">📖 ${t("افتح المصحف","Open the Quran")}</a><button class="btn s" data-tab="invest">🌿 ${t("استثمر وقتك في عمل نافع","Invest your time in something beneficial")}</button>`}
+function stats(){const d=day(),days=[];for(let i=6;i>=0;i--){const x=new Date();x.setDate(x.getDate()-i);days.push([x.toLocaleDateString(AR()?"ar":"en",{weekday:"short"}),(U.days[kd(x)]||{sec:0}).sec])}
+ const mx=Math.max(S.goalMin*60,...days.map(a=>a[1]),1),prev=days.slice(0,6).map(a=>a[1]).filter(v=>v>0),avg=prev.length?prev.reduce((a,b)=>a+b)/prev.length:null;
+ return `<h2>${t("إحصاءات استخدامك","Your usage")}</h2>`+card(`<div class="stats"><div><b>${fm(d.sec/60)}</b><span>${t("اليوم","Today")}</span></div><div><b>${d.ses}</b><span>${t("جلسات","Sessions")}</span></div><div><b>${fm(d.long/60)}</b><span>${t("أطول جلسة","Longest")}</span></div><div><b>${d.rem}</b><span>${t("تذكيرات","Reminders")}</span></div></div>`)
+ +card(`<h2>${t("آخر ٧ أيام","Last 7 days")}</h2><div class="bars">${days.map(([l,s])=>`<div class="bar"><span>${s?fm(s/60):""}</span><i style="height:${110*s/mx}px"></i><span>${l}</span></div>`).join("")}</div>${avg!==null?`<div>${d.sec<=avg?t("اليوم أقل من معدّل الأيام الماضية بـ "+fm((avg-d.sec)/60)+" — أحسنت 🌿","Today is "+fm((avg-d.sec)/60)+" below your recent average — well done 🌿"):t("يمكنك اليوم أن تخصص وقتاً نافعاً بعيداً عن الشاشة 🌿","You can set aside some beneficial screen-free time today 🌿")}</div>`:""}`)
+ +card(`<div class="dim">${t("ملاحظة: النسخة الشبكية تقيس الوقت الذي تقضيه داخل هذه الصفحة فقط، ولا تستطيع قياس استخدام التطبيقات الأخرى. للقياس الكامل استخدم نسخة الأندرويد.","Note: the web version measures only the time you spend on this page and cannot see other apps. For full phone tracking use the Android version.")}</div>`)}
+function invest(){return `<h2>${t("استثمر وقتك | Invest Your Time","Invest Your Time | استثمر وقتك")}</h2>`+card(`<div id="sess">${sessHtml()}</div>`)
+ +`<b>${t("اختر أنشطتك المفضلة","Choose your preferred activities")}</b>`+ACTS.map(a=>`<button class="act ${S.acts.includes(a[0])?"on":""}" data-act="${a[0]}"><em>${a[1]}</em><span>${AR()?a[2]:a[3]}</span>${S.acts.includes(a[0])?"✓":""}</button>`).join("")
+ +`<a class="btn s" style="text-decoration:none;display:block;font-weight:700" href="https://quran.com" target="_blank" rel="noopener">📖 ${t("افتح المصحف","Open the Quran")}</a>`}
+function sessHtml(){if(!sessEnd)return `<b style="color:var(--gold)">${t("ابدأ جلسة نافعة","Start a beneficial session")}</b><div>${t("اختر مدة، وضع الهاتف جانباً.","Pick a duration and put your phone aside.")}</div><div class="row">${[10,15,30].map(m=>`<button class="btn sm" data-sess="${m}">${m} ${t("د","min")}</button>`).join("")}</div>`;
+ const l=Math.max(0,Math.round((sessEnd-Date.now())/1000));return `<div class="timer">${String(Math.floor(l/60)).padStart(2,"0")}:${String(l%60).padStart(2,"0")}</div><div>${t("بارك الله في وقتك 🌿","May Allah bless your time 🌿")}</div><button class="btn o sm" data-x="end">${t("إنهاء","End")}</button>`}
+setInterval(()=>{if(!sessEnd)return;const e=$("#sess");if(Date.now()>=sessEnd){const m=Math.round(sessMin);sessEnd=0;toast(t("تقبّل الله منك 🌿","May Allah accept it 🌿"),t(`أتممت ${m} دقيقة في ما ينفعك. بارك الله في وقتك.`,`You completed ${m} minutes of something beneficial. May Allah bless your time.`));try{if(S.vib&&navigator.vibrate)navigator.vibrate([300,100,300])}catch(x){}}
+ if(e&&S.tab==="invest")e.innerHTML=sessHtml()},1000);let sessMin=0;
+const T=[...Array(48)].map((_,i)=>i);
+function settings(){const np="Notification" in window?Notification.permission:"denied";
+ return `<h2>${t("الإعدادات","Settings")}</h2>`
+ +card(`<h2>${t("اللغة والمظهر","Language & appearance")}</h2>${chips("lang",[["ar","العربية"],["en","English"]],S.lang)}${chips("theme",[["",t("النظام","System")],["light",t("فاتح","Light")],["dark",t("داكن","Dark")]],S.theme)}<div>${t("الخلفية الإسلامية","Islamic background")}</div>${chips("bg",[[0,t("نجوم هندسية","Geometric stars")],[1,t("محراب وأقواس","Mihrab arches")],[2,t("زخارف","Arabesque")]],S.bg)}`)
+ +card(`<h2>${t("التذكيرات","Reminders")}</h2>${sw("totalOn",t("تذكير الاستخدام الكلي","Total usage reminder"))}${S.totalOn?sel("totalMin",t("كل","Every"),[1,30,60,120,180,240,360,480]):""}${sw("contOn",t("تذكير الاستخدام المتواصل","Continuous usage reminder"))}${S.contOn?sel("contMin",t("كل","Every"),[1,15,30,60,90,120,180,240]):""}${S.contOn?sel("breakMin",t("استراحة تُعدّ فاصلاً","Break counts after"),[1,5,10,15]):""}${sel("goalMin",t("الهدف اليومي","Daily goal"),[60,120,180,240,360,480])}${sw("vib",t("الاهتزاز","Vibration"))}`)
+ +card(`<h2>${t("ساعات الهدوء","Quiet hours")}</h2>${sw("quietOn",t("عدم الإزعاج أثناء النوم","Don’t disturb while sleeping"))}${S.quietOn?`<div class="set"><span>${t("من","From")}</span><input type="time" value="${S.qs}" data-in="qs"><span>${t("إلى","To")}</span><input type="time" value="${S.qe}" data-in="qe"></div>`:""}`)
+ +card(`<h2>${t("الخصوصية والصلاحيات","Privacy & permissions")}</h2><div class="dim" style="text-align:start">${t("كل البيانات تبقى في متصفحك فقط. لا حسابات ولا إعلانات. تعمل التذكيرات ما دامت هذه الصفحة مفتوحة وظاهرة على الشاشة.","All data stays in your browser. No accounts, no ads. Reminders work while this page is open and visible on screen.")}</div><button class="btn o" data-x="notif">${np==="granted"?t("إشعارات المتصفح مفعّلة ✓","Browser notifications enabled ✓"):t("تفعيل إشعارات المتصفح","Enable browser notifications")}</button>`)
+ +`<button class="btn" data-x="about">ℹ️ ${t("عن التطبيق","About the app")}</button>`}
+function about(){return `<div class="ov"><main>${BOOK}<h1>وقتك ثمين</h1><p class="sub">Your Time Is Precious</p>`+card(`<h2>${t("عن التطبيق","About the app")}</h2><div>وقتك ثمين | Your Time Is Precious</div><h2>${t("تطوير","Created by")}</h2><div>كريم بن قاسم | Karim Benkacem</div><h2>WhatsApp</h2><a href="https://wa.me/213778388878" target="_blank" rel="noopener" dir="ltr" style="font-size:20px">+213 778 38 88 78</a>`)+`<button class="btn" data-x="closeabout">${t("رجوع","Back")}</button></main></div>`}
+function onboard(){return `<div class="ov"><main>${BOOK}<h1>وقتك ثمين</h1><p class="sub">Your Time Is Precious</p><div class="row">${[["ar","العربية"],["en","English"]].map(([v,l])=>`<button class="chip ${S.lang==v?"on":""}" data-set="lang" data-val="${v}">${l}</button>`).join("")}</div>`
+ +card(`<h2>${t("وقتك أمانة","Your time is a trust")}</h2><div>${t("يذكّرك هذا التطبيق بلطف أن وقتك ثمين، ويشجعك على تقليل الاستخدام غير الضروري للهاتف وقضاء وقت أكثر في القرآن والعلم والعبادة.","This app gently reminds you that your time is precious and encourages you to spend less time on unnecessary phone use and more on the Quran, learning and worship.")}</div><div class="dim">${t("النسخة الشبكية تحسب الوقت الذي تقضيه في هذه الصفحة فقط، وتبقى بياناتك في متصفحك.","The web version counts only the time you spend on this page, and your data stays in your browser.")}</div>`)
+ +`<button class="btn" data-x="start">${t("ابدأ","Start")}</button></main></div>`}
+function render(){const b=document.body,r=document.documentElement;r.lang=S.lang;r.dir=AR()?"rtl":"ltr";S.theme?r.dataset.theme=S.theme:r.removeAttribute("data-theme");b.className="b"+S.bg;
+ const v={home,stats,invest,settings}[S.tab]||home;$("#app").innerHTML=(S.done?"":onboard())+(window._about?about():"")+`<main>${v()}</main>`;
+ $("#nav").innerHTML=[["home","🏠",t("الرئيسية","Home")],["stats","📊",t("إحصاءات","Stats")],["invest","🌿",t("استثمر","Invest")],["settings","⚙️",t("الإعدادات","Settings")]].map(([k,e,l])=>`<button class="${S.tab===k?"on":""}" data-tab="${k}"><span>${e}</span>${l}</button>`).join("")}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-tab],[data-set],[data-tog],[data-act],[data-sess],[data-x]");if(!b)return;const D=b.dataset;
+ if(D.tab){S.tab=D.tab;scrollTo(0,0)}
+ else if(D.set){S[D.set]=isNaN(D.val)||D.val===""?D.val:+D.val}
+ else if(D.tog){S[D.tog]=S[D.tog]?0:1}
+ else if(D.act){const i=S.acts.indexOf(D.act);i<0?S.acts.push(D.act):S.acts.splice(i,1)}
+ else if(D.sess){sessMin=+D.sess;sessEnd=Date.now()+sessMin*60000}
+ else if(D.x==="end")sessEnd=0;
+ else if(D.x==="about")window._about=1;
+ else if(D.x==="closeabout")window._about=0;
+ else if(D.x==="start"){S.done=1;try{if("Notification" in window&&Notification.permission==="default")Notification.requestPermission()}catch(x){}}
+ else if(D.x==="notif"){try{Notification.requestPermission().then(render)}catch(x){}}
+ save();render()});
+document.addEventListener("change",e=>{const i=e.target.dataset;if(!i.in)return;S[i.in]=i.num!==undefined?+e.target.value:e.target.value;save();render()});
+setInterval(()=>{if(!document.hidden&&(S.tab==="home"||S.tab==="stats")&&S.done&&!window._about)render()},5000);
+render();
+</script>
+</body>
+</html>
